@@ -67,7 +67,7 @@ function setup() {
     giftMouseW.y = bgBigPurple.y - 23;
     app.stage.addChild(giftMouseW);
     let message = new Text("Hello PIXI",
-                           {font: "bold 20px", fill: "red"});
+                           {font: "bold 20px Arial", fill: "red"});
     app.stage.addChild(message);
     
 
