@@ -43,6 +43,11 @@ function setup() {
     //winBtnGreenNorm.scale.x = 1.5;
     //winBtnGreenNorm.scale.y = 1.5;
     app.stage.addChild(winBtnGreenNorm); 
+    let btnCloseNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_close_norm.png"]);
+    btnCloseNorm.x = bgBigPurple.x + bgBigPurple.width - 55;
+    btnCloseNorm.y = bgBigPurple.y + 40;
+    app.stage.addChild(btnCloseNorm);
+    
     let giftMouseB = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_gift_mouseB.png"]);
     giftMouseB.x = bgBigPurple.x - giftMouseB.width / 4 + 5;
     giftMouseB.y = appHeight-giftMouseB.height - 30;
