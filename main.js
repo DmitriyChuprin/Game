@@ -1,6 +1,7 @@
 let Container = PIXI.Container,
     loader = PIXI.Loader.shared,
-    Sprite = PIXI.Sprite;
+    Sprite = PIXI.Sprite,
+    Text = PIXI.Text;
 
 
 let app = new PIXI.Application({width: 898, height: 649});
@@ -47,7 +48,16 @@ function setup() {
     btnCloseNorm.x = bgBigPurple.x + bgBigPurple.width - 55;
     btnCloseNorm.y = bgBigPurple.y + 40;
     app.stage.addChild(btnCloseNorm);
-    
+    let btnArrowOver1 = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_arrow_over.png"]);
+    btnArrowOver1.rotation = 0.5;
+    btnArrowOver1.x = bgBigPurple.x + 100;
+    btnArrowOver1.y = bgBigPurple.height / 2 + 120;
+    app.stage.addChild(btnArrowOver1);
+    let btnArrowOver2 = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_arrow_over.png"]);
+    btnArrowOver2.rotation = 1.5;
+    btnArrowOver2.x = bgBigPurple.x + bgBigPurple.width - 100;
+    btnArrowOver2.y = bgBigPurple.height / 2 + 120;
+    app.stage.addChild(btnArrowOver2);
     let giftMouseB = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_gift_mouseB.png"]);
     giftMouseB.x = bgBigPurple.x - giftMouseB.width / 4 + 5;
     giftMouseB.y = appHeight-giftMouseB.height - 30;
@@ -56,6 +66,9 @@ function setup() {
     giftMouseW.x = bgBigPurple.x + (bgBigPurple.width/2) + 130 ;
     giftMouseW.y = bgBigPurple.y - 23;
     app.stage.addChild(giftMouseW);
+    let message = new Text("Hello PIXI",
+                           {font: "bold 20px", fill: "red"});
+    app.stage.addChild(message);
     
 
 }
