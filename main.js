@@ -66,9 +66,13 @@ function setup() {
     giftMouseW.x = bgBigPurple.x + (bgBigPurple.width/2) + 130 ;
     giftMouseW.y = bgBigPurple.y - 23;
     app.stage.addChild(giftMouseW);
-    let message = new Text("Hello PIXI",
-                           {font: "bold 20px Arial", fill: "red"});
+    let message = new Text("Выберите друзей",
+                           {font: "bold 40px Arial", fill: "#412d73", align: "center", fontWeight: "bolder", stroke: "#ffffff", strokeThickness: 4,
+                            wordWrap: true, dropShadow: true, dropShadowColor: "#ffffff", dropShadowDistance: 1, dropShadowAngle: 0, });
+    message.x = bgBigPurpleTitle.x + (bgBigPurpleTitle.width - message.width) / 2;
+    message.y = bgBigPurpleTitle.y + (bgBigPurpleTitle.height - message.height) / 2 - 5;
     app.stage.addChild(message);
+
     
 
 }
