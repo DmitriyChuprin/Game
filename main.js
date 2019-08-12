@@ -39,9 +39,9 @@ function setup() {
     bgBigPurpleTitle.y = bgBigPurple.y + 10;
     app.stage.addChild(bgBigPurpleTitle); 
     let winBtnGreenNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_green_norm.png"]);   
-    winBtnGreenNorm.x = bgBigPurple.x + (bgBigPurple.width - winBtnGreenNorm.width) / 2;
+    winBtnGreenNorm.x = bgBigPurple.x + (bgBigPurple.width - winBtnGreenNorm.width) / 2 - 40;
     winBtnGreenNorm.y = (bgBigPurple.y + bgBigPurple.height) - winBtnGreenNorm.height - 15;
-    //winBtnGreenNorm.scale.x = 1.5;
+    winBtnGreenNorm.scale.x = 1.5;
     //winBtnGreenNorm.scale.y = 1.5;
     app.stage.addChild(winBtnGreenNorm); 
     let btnCloseNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_close_norm.png"]);
@@ -55,7 +55,7 @@ function setup() {
     app.stage.addChild(btnArrowOver1);
     let btnArrowOver2 = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_arrow_over.png"]);
     btnArrowOver2.rotation = 1.5;
-    btnArrowOver2.x = bgBigPurple.x + bgBigPurple.width - 100;
+    btnArrowOver2.x = bgBigPurple.x + bgBigPurple.width - 50;
     btnArrowOver2.y = bgBigPurple.height / 2 + 120;
     app.stage.addChild(btnArrowOver2);
     let giftMouseB = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_gift_mouseB.png"]);
@@ -72,6 +72,28 @@ function setup() {
     message.x = bgBigPurpleTitle.x + (bgBigPurpleTitle.width - message.width) / 2;
     message.y = bgBigPurpleTitle.y + (bgBigPurpleTitle.height - message.height) / 2 - 5;
     app.stage.addChild(message);
+    let title = new Text("Выберите друзей, у которых хотите попросить жизнь",
+                            {fontFamily: "Arial", fontSize: "20px", fill: "#f9e006", align: "center", fontWeight: "bolder", stroke: "#412d73", strokeThickness: 3,
+                        wordWrap: true, wordWrapWidth: 400});
+    title.x = bgBigPurpleTitle.x + (bgBigPurpleTitle.width - title.width) / 2 - 20;
+    title.y = bgBigPurpleTitle.y + (bgBigPurpleTitle.height - title.height) / 2 + 60;
+    app.stage.addChild(title);
+    let leftSide = new Text("Все друзья",
+                            {fontFamily: "Arial", fontSize: "17px", fill: "#1c1138", align: "center", fontWeight: "bolder"});
+    leftSide.x = btnPurpleNormal.x + (btnPurpleNormal.width - leftSide.width) / 2;
+    leftSide.y = btnPurpleNormal.y + (btnPurpleNormal.height - leftSide.height) / 2 - 7;
+    app.stage.addChild(leftSide);
+    let rightSide = new Text("Друзья в приложении",
+                            {fontFamily: "Arial", fontSize: "17px", fill: "#1c1138", align: "center", fontWeight: "bolder"});
+    rightSide.x = btnPurpleNormalDis.x + (btnPurpleNormalDis.width - rightSide.width) / 2;
+    rightSide.y = btnPurpleNormalDis.y + (btnPurpleNormalDis.height - rightSide.height) / 2 - 7;
+    app.stage.addChild(rightSide);
+    let sendAll = new Text("Отправить всем",
+                            {fontFamily: "Arial", fontSize: "22px", fill: "#ffffff", align: "center", fontWeight: "bolder", stroke: "#0a2e15", strokeThickness: 3,
+                        dropShadow: true, dropShadowColor: "#0a2e15", dropShadowAngle: 3*Math.PI/4, dropShadowDistance: 2});
+    sendAll.x = winBtnGreenNorm.x + (winBtnGreenNorm.width - sendAll.width) / 2;
+    sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
+    app.stage.addChild(sendAll);
 
     
 
