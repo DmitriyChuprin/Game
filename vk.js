@@ -1,8 +1,1 @@
-VK.init(function() {
-    // API initialization succeeded
-    console.log("Success");
-}, function() {
-    // API initialization failed
-    // Can reload page here
-    console.log("Error");
-}, '5.101');
+let lite = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11, 12];
