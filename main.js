@@ -123,6 +123,8 @@
      sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
      app.stage.addChild(sendAll);
 
-
+     let ask = new Container();
+     app.stage.addChild(ask);
+     
 
  }

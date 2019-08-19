@@ -1,6 +1,6 @@
-import allfriends from "friends.js";
+import allfriends from "./friends.js";
 function next(allfriends) {
-    let tempMassive = lst.slice(count, count+6);
+    let tempMassive = lst.slice(count, count+8);
     console.log("Length: " + tempMassive.length);
     tempMassive.forEach(function(item) {
         console.log(item);
@@ -12,7 +12,7 @@ function next(allfriends) {
 };
 
 function previous(allfriends) {
-  let newCount = count - 6;
+  let newCount = count - 8;
     if (newCount < 0) {
       newCount = 0;}
     let tempMassive = lst.slice(newCount, count);
@@ -22,3 +22,5 @@ function previous(allfriends) {
     });
     count -= tempMassive.length;    
 }
+
+next(allfriends);
