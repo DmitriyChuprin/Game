@@ -27,4 +27,4 @@ function previous(lst) {
     count -= tempMassive.length;
 }
 
-next(allfriends);
+//next(allfriends);
