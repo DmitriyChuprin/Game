@@ -1,4 +1,4 @@
-import { allfriends } from "./scripts/friends.js";
+import { allfriends } from "./friends.js";
 
 let count = 0;
 
