@@ -1,4 +1,4 @@
- import allFriends from "friends.js";
+ //import allfriends from "./js/friends.js";
 
  let Container = PIXI.Container,
      loader = PIXI.Loader.shared,
