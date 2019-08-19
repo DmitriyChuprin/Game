@@ -1,4 +1,6 @@
-import { allfriends } from "./friends.js";
+import { allfriends } from "./scripts/friends.js";
+
+let count = 0;
 
 function next(lst) {
     let tempMassive = lst.slice(count, count + 8);
