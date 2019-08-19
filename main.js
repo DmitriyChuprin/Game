@@ -1,4 +1,4 @@
- import allFriends from "./friends.js";
+ import allFriends from "friends.js";
 
  let Container = PIXI.Container,
      loader = PIXI.Loader.shared,
@@ -123,6 +123,6 @@
      sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
      app.stage.addChild(sendAll);
 
-     
+
 
  }

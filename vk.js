@@ -1,4 +1,4 @@
-import allfriends from "/.friends.js";
+import allfriends from "friends.js";
 function next(allfriends) {
     let tempMassive = lst.slice(count, count+6);
     console.log("Length: " + tempMassive.length);
