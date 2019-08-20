@@ -1,13 +1,16 @@
 //import { allfriends } from "./friends.js";
-let allfriends = [];
-VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
-    let friends = data.response.items.length;
-    for (let i=0; i < friends; i++) {
-        allfriends.push(data.response.items[i]);
-    }
+function getFriends(){
+    let allfriends = [];
+    VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
+        let friends = data.response.items.length;
+        for (let i=0; i < friends; i++) {
+            allfriends.push(data.response.items[i]);
+            }
     
 });
-
+    return allfriends;
+}
+let friends = getFriends();
 let count = 0;
 
 function next(lst) {
@@ -36,4 +39,4 @@ function previous(lst) {
     count -= tempMassive.length;
 }
 
-next(allfriends);
+next(friends);
