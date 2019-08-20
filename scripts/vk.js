@@ -12,7 +12,7 @@ function getFriends(){
 }
 let friends = getFriends();
 let count = 0;
-
+console.log(friends);
 function next(lst) {
     console.log(lst[0]);
     let tempMassive = lst.slice(count, count + 8);
