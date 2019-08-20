@@ -11,6 +11,7 @@ VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data)
 let count = 0;
 
 function next(lst) {
+    console.log(lst[0]);
     let tempMassive = lst.slice(count, count + 8);
     console.log("Length: " + tempMassive.length);
     tempMassive.forEach(function(item) {
