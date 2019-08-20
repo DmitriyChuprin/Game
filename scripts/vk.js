@@ -1,4 +1,9 @@
 //import { allfriends } from "./friends.js";
+
+let friends = getFriends();
+let count = 0;
+next(friends);
+
 function getFriends() {
     let allfriends = [];
     VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
@@ -10,9 +15,6 @@ function getFriends() {
     });
     return allfriends;
 }
-let friends = getFriends();
-let count = 0;
-console.log(friends);
 
 function next(lst) {
     console.log(lst[0]);
@@ -39,5 +41,3 @@ function previous(lst) {
     });
     count -= tempMassive.length;
 }
-
-next(friends);

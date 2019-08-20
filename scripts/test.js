@@ -34,13 +34,44 @@ test = {
         }]
     }
 }
-let friends = test.response.items;
-console.log(friends.length);
-for (let element = 0; element < friends.length; element++) {
-    console.log(friends[element].first_name);
+
+function getFriends() {
+    let allfriends = [];
+    let friends = test.response.items;
+    friends.forEach(element => {
+        allfriends.push(element);
+    })
+    return allfriends;
 }
-let newFriends = [];
-friends.forEach(element => {
-    newFriends.push(element);
-});
-console.log(newFriends.length);
+
+let friends = getFriends();
+let count = 0;
+console.log("ARRAY FRIENDS: " + friends);
+
+function next(lst) {
+    console.log("FIRST ITEM: " + lst[0]);
+    let tempMassive = lst.slice(count, count + 8);
+    console.log("Length: " + tempMassive.length);
+    tempMassive.forEach(function(item) {
+        console.log(item);
+    });
+    count += tempMassive.length;
+    if (count === 21) {
+        count = 20;
+    };
+};
+
+function previous(lst) {
+    let newCount = count - 8;
+    if (newCount < 0) {
+        newCount = 0;
+    }
+    let tempMassive = lst.slice(newCount, count);
+    console.log("Length: " + tempMassive.length);
+    tempMassive.forEach(function(item) {
+        console.log(item);
+    });
+    count -= tempMassive.length;
+}
+
+next(friends);
