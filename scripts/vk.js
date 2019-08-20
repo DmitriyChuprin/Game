@@ -2,12 +2,12 @@
 
 let friends = getFriends();
 let count = 0;
-next(friends);
+//next(friends);
 
 function getFriends() {
     let allfriends = [];
     VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
-        let friends = data.response.items;
+        let friends = data;
         friends.forEach(element => {
             allfriends.push(element);
         })
@@ -15,6 +15,7 @@ function getFriends() {
     });
     return allfriends;
 }
+console.log(friends);
 
 function next(lst) {
     console.log(lst[0]);
