@@ -3,12 +3,6 @@
 let friends = getFriends();
 let count = 0;
 //next(friends);
-let req = VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
-    //let friends = data.response.items;
-    return data;
-    });
-console.log(req);
-console.log(req.response[0]);
 
 
 function getFriends() {
