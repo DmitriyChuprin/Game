@@ -1,15 +1,18 @@
-let allfriends = [];
-VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
-    data.response.items.forEach(element => {
-        allfriends.push(element);
+function getFriends() {
+    let allfriends = [];
+    VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
+        data.response.items.forEach(element => {
+            allfriends.push(element);
+        });
     });
-});
-console.log(allfriends);
+    return allfriends;
+}
+console.log(getFriends());
 //export { allfriends };
-function all() {
-    allfriends.forEach(element => {
+function all(el) {
+    el.forEach(element => {
         console.log(element);
     })
 };
 
-all()
+console.log(all(getFriends()));
