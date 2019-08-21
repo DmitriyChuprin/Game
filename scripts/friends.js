@@ -6,6 +6,10 @@ VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data)
 });
 console.log(allfriends);
 //export { allfriends };
-allfriends.forEach(element => {
-    console.log(element)
-});
+function all() {
+    allfriends.forEach(element => {
+        console.log(element);
+    })
+};
+
+all()
