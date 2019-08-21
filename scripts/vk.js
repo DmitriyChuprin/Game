@@ -16,6 +16,8 @@ function getFriends() {
     return allfriends;
 }
 console.log(friends);
+console.log(friends[0]);
+console.log(friends[0].first_name);
 
 function next(lst) {
     console.log(lst[0]);
