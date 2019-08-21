@@ -7,7 +7,7 @@ let count = 0;
 function getFriends() {
     let allfriends;
     VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
-        let friends = data;
+        let friends = data.response.items;
         friends.forEach(element => {
             allfriends.push(element);
         })
