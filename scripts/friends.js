@@ -6,7 +6,7 @@ function getFriends() {
         //});
         all(data.response);
     });
-    return allfriends;
+
 }
 
 //export { allfriends };
