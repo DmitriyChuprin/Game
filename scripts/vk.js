@@ -23,7 +23,9 @@ function getFriends() {
     return allfriends;
     };
 
-
+console.log(friends);
+console.log(friends.response);
+console.log(friends.response[0]);
 
 
 
