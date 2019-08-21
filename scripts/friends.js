@@ -1,20 +1,18 @@
 function getFriends() {
-    let allfriends = [];
-    VK.api("friends.get", { "fields": "photo_100", "count": "1000", "v": "101" }, function(data) {
+    //let allfriends = [];
+    VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, function(data) {
         //data.response.items.forEach(element => {
         // allfriends.push(element);
         //});
-        console.log(data);
+        all(data.response);
     });
     return allfriends;
 }
-console.log(getFriends());
+
 //export { allfriends };
 function all(el) {
-    console.log(typeof(el));
-    for (let key in el) {
-        console.log(key + ":" + el.key);
+    for (let i = 0; i < el.length; i++) {
+        console.log(el[i].id)
     }
 };
-
-console.log(all(getFriends()));
+getFriends();
