@@ -15,9 +15,12 @@ function getFriends() {
         })
     return allfriends;
     };
-    
+let f = friends.response.items;
+f.forEach(i => {
+    console.log(i)
+})
 
-console.log(friends);
+
 
 
 function next(lst) {
