@@ -1,4 +1,4 @@
-test = {
+let test = {
     "response": {
         "count": 1132,
         "items": [{
