@@ -8,8 +8,8 @@ let req = VK.api("friends.get", { "fields": "photo_100", "count": "1000" }, func
     return data;
     });
 console.log(req);
-console.log(req.response);
-console.log(req.response.items);
+console.log(req.response[0]);
+
 
 function getFriends() {
     let allfriends = {};
