@@ -13,13 +13,13 @@ function getFriends() {
             allfriends.key = key;
             allfriends[key] = data[key];
         }
-        })
+    })
     return allfriends;
-    };
+};
 
-console.log(friends);
-console.log(friends.response);
-console.log(friends.response[0]);
+//console.log(friends);
+//console.log(friends.response);
+//console.log(friends.response[0]);
 
 
 

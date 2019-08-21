@@ -12,7 +12,7 @@ function getFriends() {
 //export { allfriends };
 function all(el) {
     for (let i = 0; i < el.length; i++) {
-        console.log(el[i].id)
+        console.log(el[i].id);
     }
 };
 getFriends();
