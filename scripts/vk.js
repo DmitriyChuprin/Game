@@ -44,3 +44,5 @@ function previous(lst) {
     });
     count -= tempMassive.length;
 }
+
+next(friends);
