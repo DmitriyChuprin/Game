@@ -10,9 +10,10 @@ function getFriends() {
 console.log(getFriends());
 //export { allfriends };
 function all(el) {
-    el.forEach(element => {
-        console.log(element);
-    })
+    console.log(typeof(el));
+    for (let key in el) {
+        console.log(key + ":" + el.key);
+    }
 };
 
 console.log(all(getFriends()));
