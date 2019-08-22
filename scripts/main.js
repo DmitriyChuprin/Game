@@ -124,6 +124,14 @@
      app.stage.addChild(sendAll);
 
      let ask = new Container();
+     let rectangle = new PIXI.Graphics();
+     rectangle.beginFill(0xFFFFFF);
+     rectangle.drawRect(0, 0, 100, 100);
+     rectangle.endFill();
+     rectangle.x = 64;
+     rectangle.y = 64;
+     rectangle.alpha = 0.5;
+     ask.addChild(rectangle);
      app.stage.addChild(ask);
      
 
