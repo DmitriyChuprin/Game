@@ -124,15 +124,30 @@
      app.stage.addChild(sendAll);
 
      let ask = new Container();
-     let rectangle = new PIXI.Graphics();
-     rectangle.beginFill(0xFFFFFF);
-     rectangle.drawRect(0, 0, 100, 100);
-     rectangle.endFill();
-     rectangle.x = 64;
-     rectangle.y = 64;
-     rectangle.alpha = 0.5;
-     ask.addChild(rectangle);
      app.stage.addChild(ask);
-     
+     let a = 244;
+     let b = 288.5;
+     let x = 0;
+     let y = 0;
+     let y1 = 0;
+     for (let i=1; i <= 8; i++) {
+         if (i<5) {            
+            let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
+            shape.x = a;
+            shape.y = y + b;
+            y += shape.height + 10;
+            ask.addChild(shape); 
+         }
+         if (i > 4) {
+            let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
+            shape.x = a + 246;
+            shape.y = y1 + b;
+            y1 += shape.height + 10;
+            ask.addChild(shape); 
+             
+         }
+        
+     //}
 
  }
+}
