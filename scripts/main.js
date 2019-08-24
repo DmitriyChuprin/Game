@@ -123,8 +123,20 @@
      sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
      app.stage.addChild(sendAll);
 
+
      let ask = new Container();
+
+     let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
+     let frame = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_frame_empty.png"]);
+     let check = new Sprite(loader.resources["images/image_atlas.json"].textures["checkbox_norm.png"]);
+     check.x = shape.width - 45;
+     check.y = (shape.height - check.height) / 2 - 2;
+     ask.addChild(shape);
+     ask.addChild(frame);
+     ask.addChild(check);
      app.stage.addChild(ask);
+
+
      /*let a = 244;
      let b = 288.5;
      let y = 0;
@@ -138,10 +150,10 @@
              ask.addChild(shape);
              let frame = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_frame_empty.png"]);
 
-         }
-         if (i > 4) {
-             let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
-             shape.x = a + 246;
+         }                                                                                                                                                                                                                                 
+         if (i > 4) {         
+            let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
+             shape.x = a + 246;                                   
              shape.y = y1 + b;
              y1 += shape.height + 10;
              ask.addChild(shape);
