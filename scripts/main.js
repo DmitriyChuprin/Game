@@ -125,7 +125,7 @@
 
      let ask = new Container();
      app.stage.addChild(ask);
-     let a = 244;
+     /*let a = 244;
      let b = 288.5;
      let y = 0;
      let y1 = 0;
@@ -149,6 +149,5 @@
          }
 
          //}
-
-     }
+*/
  }
