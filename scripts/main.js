@@ -163,6 +163,7 @@
      ask.addChild(check);
      ask.addChild(name);
      app.stage.addChild(ask);
+     return ask;
  }
 
  function listFriends(offset = 0) {
@@ -174,13 +175,10 @@
          let y1 = 0;
          for (let i = 0; i < 8; i++) {
              if (i < 5) {
-                 let element1 = new Container();
                  let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
-                 element1.addChild(row1);
-                 app.stage.addChild(element1);
-                 element1.x = a;
-                 element1.y = y + b;
-                 y += element1.height + 10;
+                 row1.x = a;
+                 row1.y = y + b;
+                 y += row1.height + 10;
              }
              if (i > 4) {
                  let secondRow = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
