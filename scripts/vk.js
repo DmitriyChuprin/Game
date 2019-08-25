@@ -1,6 +1,6 @@
 //import { allfriends } from "./friends.js";
 
-let friends = getFriends();
+/*let friends = getFriends();
 let count = 0;
 //next(friends);
 
@@ -49,4 +49,4 @@ function previous(lst) {
     count -= tempMassive.length;
 }
 
-next(friends);
+next(friends);*/

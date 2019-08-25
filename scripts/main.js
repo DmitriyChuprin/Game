@@ -181,7 +181,6 @@
              }
              if (i > 4) {
                  let secondRow = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
-                 let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
                  secondRow.x = a + 246;
                  secondRow.y = y1 + b;
                  y1 += secondRow.height + 10;

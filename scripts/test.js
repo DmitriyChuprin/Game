@@ -1,4 +1,4 @@
-function next() {
+/*function next() {
     let click = 8;
     VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": click }, function(data) {
         //let friends = data.response.items;
@@ -11,4 +11,4 @@ function next() {
 }
 
 next();
-next();
+next();*/
