@@ -174,10 +174,10 @@
          let y1 = 0;
          for (let i = 0; i < 8; i++) {
              if (i < 5) {
-                 let firstRow = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
-                 firstRow.x = a;
-                 firstRow.y = y + b;
-                 y += firstRow.height + 10;
+                 createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
+                 ask.x = a;
+                 ask.y = y + b;
+                 y += ask.height + 10;
              }
              if (i > 4) {
                  let secondRow = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
