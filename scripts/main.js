@@ -169,7 +169,7 @@
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
          //let friends = data.response.items;
          let a = 244;
-         let b = 288.5;
+         let b = 258.5;
          let y = 0;
          let y1 = 0;
          for (let i = 0; i < 8; i++) {
@@ -181,9 +181,10 @@
                  y += row1.height + 10;
              }
              if (i > 4) {
-                 let secondRow = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
+                 let row2 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  secondRow.x = a + 246;
                  secondRow.y = y1 + b;
+                 app.stage.addChild(row2);
                  y1 += secondRow.height + 10;
              }
          }
