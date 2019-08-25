@@ -162,7 +162,6 @@
      ask.addChild(frame);
      ask.addChild(check);
      ask.addChild(name);
-     app.stage.addChild(ask);
      return ask;
  }
 
@@ -178,6 +177,7 @@
                  let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  row1.x = a;
                  row1.y = y + b;
+                 app.stage.addChild(row1);
                  y += row1.height + 10;
              }
              if (i > 4) {
