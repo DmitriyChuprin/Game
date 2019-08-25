@@ -169,7 +169,7 @@
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
          //let friends = data.response.items;
          let a = 244;
-         let b = 258.5;
+         let b = 288.5;
          let y = 0;
          let y1 = 0;
          for (let i = 0; i <= 8; i++) {
