@@ -98,11 +98,23 @@
      title.x = bgBigPurpleTitle.x + (bgBigPurpleTitle.width - title.width) / 2 - 20;
      title.y = bgBigPurpleTitle.y + (bgBigPurpleTitle.height - title.height) / 2 + 60;
      app.stage.addChild(title);
-     let leftSide = new Text("Все друзья", { fontFamily: "Arial", fontSize: "17px", fill: "#1c1138", align: "center", fontWeight: "bolder" });
+     let leftSide = new Text("Все друзья", {
+         fontFamily: "Arial",
+         fontSize: "17px",
+         fill: "#1c1138",
+         align: "center",
+         fontWeight: "bolder"
+     });
      leftSide.x = btnPurpleNormal.x + (btnPurpleNormal.width - leftSide.width) / 2;
      leftSide.y = btnPurpleNormal.y + (btnPurpleNormal.height - leftSide.height) / 2 - 7;
      app.stage.addChild(leftSide);
-     let rightSide = new Text("Друзья в приложении", { fontFamily: "Arial", fontSize: "17px", fill: "#1c1138", align: "center", fontWeight: "bolder" });
+     let rightSide = new Text("Друзья в приложении", {
+         fontFamily: "Arial",
+         fontSize: "17px",
+         fill: "#1c1138",
+         align: "center",
+         fontWeight: "bolder"
+     });
      rightSide.x = btnPurpleNormalDis.x + (btnPurpleNormalDis.width - rightSide.width) / 2;
      rightSide.y = btnPurpleNormalDis.y + (btnPurpleNormalDis.height - rightSide.height) / 2 - 7;
      app.stage.addChild(rightSide);
@@ -122,22 +134,35 @@
      sendAll.x = winBtnGreenNorm.x + (winBtnGreenNorm.width - sendAll.width) / 2;
      sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
      app.stage.addChild(sendAll);
+     createFriendBox();
+ }
 
-
+ function createFriendBox() {
      let ask = new Container();
-
      let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
      let frame = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_frame_empty.png"]);
      let check = new Sprite(loader.resources["images/image_atlas.json"].textures["checkbox_norm.png"]);
      check.x = shape.width - 45;
      check.y = (shape.height - check.height) / 2 - 2;
+     let name = new Text("Dima", {
+         fontFamily: "Arial",
+         fontSize: "17px",
+         fill: "#1c1138",
+         align: "center",
+         fontWeight: "bolder"
+     });
+     name.x = (shape.width - name.width) / 2;
+     name.y = (shape.height - name.height) / 2 - 2;
+     // let zombieTexture = PIXI.Texture.fromImage('zombie.png'); 
+     //let zombie = new PIXI.Sprite(zombieTexture);
      ask.addChild(shape);
      ask.addChild(frame);
      ask.addChild(check);
+     ask.addChild(name);
      app.stage.addChild(ask);
+ }
 
-
-     /*let a = 244;
+ /*let a = 244;
      let b = 288.5;
      let y = 0;
      let y1 = 0;
@@ -162,4 +187,3 @@
 
          //}
 */
- }
