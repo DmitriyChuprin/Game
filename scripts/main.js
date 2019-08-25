@@ -177,6 +177,7 @@
                  let element1 = new Container();
                  let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  element1.addChild(row1);
+                 app.stage.addChild(element1);
                  element1.x = a;
                  element1.y = y + b;
                  y += element1.height + 10;
