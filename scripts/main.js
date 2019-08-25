@@ -178,14 +178,14 @@
                  row1.x = a;
                  row1.y = y + b;
                  app.stage.addChild(row1);
-                 y += row1.height + 1;
+                 y += row1.height + 10;
              }
              if (i > 3) {
                  let row2 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  row2.x = a + 246;
                  row2.y = y1 + b;
                  app.stage.addChild(row2);
-                 y1 += row2.height + 1;
+                 y1 += row2.height + 10;
              }
          }
      })
