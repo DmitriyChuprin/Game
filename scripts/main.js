@@ -10,8 +10,7 @@
  let appWidth = app.renderer.width;
  let appHeight = app.renderer.height;
  document.body.appendChild(app.view);
- let scale = scaleToWindow(render.view);
- let t = new Tink(PIXI.render.view, scale);
+
 
  function gameLoop() {
      requestAnimationFrame(gameLoop);
@@ -205,3 +204,8 @@
          }
      })
  };
+ let scale = scaleToWindow(render.view);
+ let t = new Tink(PIXI.render.view, scale);
+ let pointer = t.makePointer();
+ pointer.tap = () => console.log("Press");
+ pointer.hitTestSprite(sendAll);
