@@ -9,9 +9,16 @@
  let app = new PIXI.Application({ width: 898, height: 649 });
  let appWidth = app.renderer.width;
  let appHeight = app.renderer.height;
-
  document.body.appendChild(app.view);
+ let scale = scaleToWindow(render.view);
+ let t = new Tink(PIXI.render.view, scale);
 
+ function gameLoop() {
+     requestAnimationFrame(gameLoop);
+     state();
+     t.update();
+     render.render(stage);
+ }
 
  loader
      .add("images/image_atlas.json")
@@ -162,13 +169,13 @@
      ask.addChild(frame);
      ask.addChild(check);
      ask.addChild(name);
-     ask.addEventListener('click', function () {                 
-        if (data.response.items[i].online) {
-            console.log("Hello friend!!!");
-        } else {
-            console.log("Let get us!");
-        }                    
-    });
+     ask.addEventListener('click', function() {
+         if (data.response.items[i].online) {
+             console.log("Hello friend!!!");
+         } else {
+             console.log("Let get us!");
+         }
+     });
      return ask;
  }
 
@@ -185,7 +192,7 @@
                  row1.x = a;
                  row1.y = y + b;
                  app.stage.addChild(row1);
-                 
+
                  y += row1.height + 10;
              }
              if (i > 3) {
@@ -198,4 +205,3 @@
          }
      })
  };
- 
