@@ -141,8 +141,8 @@
      sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
      app.stage.addChild(sendAll);
      listFriends();
-     let scale = scaleToWindow(render.view);
-     let t = new Tink(PIXI.render.view, scale);
+
+     let t = new Tink(PIXI.render.view);
      let pointer = t.makePointer();
      pointer.tap = () => console.log("Press");
      pointer.hitTestSprite(sendAll);
