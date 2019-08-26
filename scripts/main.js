@@ -179,6 +179,13 @@
                  row1.y = y + b;
                  app.stage.addChild(row1);
                  row1.addEventListener('click', onCLick());
+                 function onClick() {
+                    if (data.response.items[i].online) {
+                        console.log("Hello friend!!!");
+                    } else {
+                        console.log("Let get us!");
+                    }                    
+                };
                  y += row1.height + 10;
              }
              if (i > 3) {
@@ -191,11 +198,4 @@
          }
      })
  };
- function onClick() {
-     if (data.response.items[i].online) {
-         console.log("Hello friend!!!");
-     } else {
-         console.log("Let get us!");
-     }
-     
- }
+ 
