@@ -178,7 +178,7 @@
                  row1.x = a;
                  row1.y = y + b;
                  app.stage.addChild(row1);
-                 row1.addEventListener('click', onCLick);
+                 row1.addEventListener('click', onCLick());
                  y += row1.height + 10;
              }
              if (i > 3) {
