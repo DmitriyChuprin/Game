@@ -186,7 +186,7 @@
                     }                    
                 });
                  y += row1.height + 10;
-             }}
+             }
              if (i > 3) {
                  let row2 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  row2.x = a + 246;
