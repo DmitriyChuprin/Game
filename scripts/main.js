@@ -168,13 +168,6 @@
      ask.addChild(frame);
      ask.addChild(check);
      ask.addChild(name);
-     ask.addEventListener('click', function() {
-         if (data.response.items[i].online) {
-             console.log("Hello friend!!!");
-         } else {
-             console.log("Let get us!");
-         }
-     });
      return ask;
  }
 
