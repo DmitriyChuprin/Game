@@ -190,7 +190,7 @@
 
              row1.interactive = true;
              row1.buttonMode = true;
-             row1.on('click', sendMessage(data.response.items[i].first_name));
+             row1.on('click', sendMessage);
              if (i < 4) {
                  row1.x = a;
                  row1.y = y + b;
@@ -210,6 +210,6 @@
      console.log("Send message");
  };
 
- function sendMessage(name) {
-     console.log(`Hello my friend ${name}!!`);
+ function sendMessage() {
+     console.log("Hello my friend");
  }
