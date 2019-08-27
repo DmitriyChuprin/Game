@@ -186,8 +186,8 @@
          let y = 0;
          let y1 = 0;
          for (let i = 0; i <= 8; i++) {
+             let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
              if (i < 4) {
-                 let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  row1.x = a;
                  row1.y = y + b;
                  app.stage.addChild(row1);
@@ -195,7 +195,6 @@
                  y += row1.height + 10;
              }
              if (i > 3) {
-                 let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
                  row1.x = a + 246;
                  row1.y = y1 + b;
                  app.stage.addChild(row1);
