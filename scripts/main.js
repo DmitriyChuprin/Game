@@ -52,8 +52,8 @@
      winBtnGreenNorm.scale.x = 1.5;
      winBtnGreenNorm.interactive = true;
      winBtnGreenNorm.buttonMode = true;
-     winBtnGreenNorm.on('pointerdown', onClick);
-          //winBtnGreenNorm.scale.y = 1.5;
+     winBtnGreenNorm.on('tap', onClick);
+     //winBtnGreenNorm.scale.y = 1.5;
      app.stage.addChild(winBtnGreenNorm);
      let btnCloseNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_close_norm.png"]);
      btnCloseNorm.x = bgBigPurple.x + bgBigPurple.width - 55;
@@ -146,7 +146,7 @@
 
      listFriends();
 
-     
+
  }
 
  function createFriendBox(id, firstName, url) {
