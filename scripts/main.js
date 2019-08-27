@@ -186,7 +186,7 @@
          let y = 0;
          let y1 = 0;
          for (let i = 0; i <= 8; i++) {
-             let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50, data.response.items[i].online);
+             let row1 = createFriendBox(data.response.items[i].first_name, data.response.items[i].photo_50, data.response.items[i].online);
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('pointdown', sendMessage);
