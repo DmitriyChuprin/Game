@@ -52,7 +52,8 @@
      winBtnGreenNorm.scale.x = 1.5;
      winBtnGreenNorm.interactive = true;
      winBtnGreenNorm.buttonMode = true;
-     winBtnGreenNorm.on('tap', onClick);
+     winBtnGreenNorm.on('click', onClick);
+     winBtnGreenNorm.on('tap', onTap);
      //winBtnGreenNorm.scale.y = 1.5;
      app.stage.addChild(winBtnGreenNorm);
      let btnCloseNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_close_norm.png"]);
@@ -206,4 +207,8 @@
 
  function onClick() {
      console.log("Send message");
+ };
+
+ function onTap() {
+     winBtnGreenNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_green_over.png"]);
  }
