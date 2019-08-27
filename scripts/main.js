@@ -145,14 +145,14 @@
 
      let t = new Tink(PIXI, app.renderer.view);
      let pointer = t.makePointer();
-     pointer.tap = () => console.log("Press");
-     if (pointer.hitTestSprite(winBtnGreenNorm)) {
-         pointer.cursor = "cursor";
-         pointer.tap = () => console.log("Send all");
+     t.makeInteractive(winBtnGreenNorm):
+     winBtnGreenNorm.press = () => {
+         console.log("Press");
      }
-     else {
-        pointer.cursor = "auto";
-     };
+     winBtnGreenNorm.release = () => {
+         console.log("Send message");
+     }
+     
  }
 
  function createFriendBox(id, firstName, url) {
