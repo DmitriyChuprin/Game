@@ -145,7 +145,13 @@
      let t = new Tink(PIXI, app.renderer.view);
      let pointer = t.makePointer();
      pointer.tap = () => console.log("Press");
-     pointer.hitTestSprite(sendAll);
+     if (pointer.hitTestSprite(sendAll)) {
+         pointer.cursor = "cursor";
+         pointer.tap = () => console.log("Send all");
+     }
+     else {
+        pointer.cursor = "auto";
+     };
  }
 
  function createFriendBox(id, firstName, url) {
