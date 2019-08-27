@@ -211,4 +211,5 @@
 
  function onTap() {
      winBtnGreenNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_green_over.png"]);
+     app.stage.addChild(winBtnGreenNorm);
  }
