@@ -150,7 +150,7 @@
 
  }
 
- function createFriendBox(id, firstName, url) {
+ function createFriendBox(firstName, url) {
      let ask = new Container();
      let shape = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_board.png"]);
      let frame = new Sprite(loader.resources["images/image_atlas.json"].textures["friend_frame_empty.png"]);
