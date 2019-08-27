@@ -180,26 +180,27 @@
 
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
-         //let friends = data.response.items;
+         console.log(data);
          let a = 244;
          let b = 288.5;
          let y = 0;
          let y1 = 0;
          for (let i = 0; i <= 8; i++) {
-             let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50);
+             let row1 = createFriendBox(data.response.items[i].id, data.response.items[i].first_name, data.response.items[i].photo_50, data.response.items[i].online);
+             row1.interactive = true;
+             row1.buttonMode = true;
+             row1.on('pointdown', sendMessage);
              if (i < 4) {
                  row1.x = a;
                  row1.y = y + b;
-                 app.stage.addChild(row1);
-
                  y += row1.height + 10;
              }
              if (i > 3) {
                  row1.x = a + 246;
                  row1.y = y1 + b;
-                 app.stage.addChild(row1);
                  y1 += row1.height + 10;
              }
+             app.stage.addChild(row1);
          }
      })
  };
@@ -207,3 +208,7 @@
  function onClick() {
      console.log("Send message");
  };
+
+ function sendMessage() {
+     console.log("Hello my friend!!");
+ }
