@@ -145,7 +145,7 @@
 
      let t = new Tink(PIXI, app.renderer.view);
      let pointer = t.makePointer();
-     t.makeInteractive(winBtnGreenNorm):
+     t.makeInteractive(winBtnGreenNorm);
      winBtnGreenNorm.press = () => {
          console.log("Press");
      }
