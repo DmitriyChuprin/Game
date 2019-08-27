@@ -50,17 +50,10 @@
      winBtnGreenNorm.x = bgBigPurple.x + (bgBigPurple.width - winBtnGreenNorm.width) / 2 - 40;
      winBtnGreenNorm.y = (bgBigPurple.y + bgBigPurple.height) - winBtnGreenNorm.height - 15;
      winBtnGreenNorm.scale.x = 1.5;
-     let t = new Tink(PIXI, app.renderer.view);
-     let pointer = t.makePointer();
-     t.makeInteractive(winBtnGreenNorm);
-     winBtnGreenNorm.press = () => {
-         console.log("Press");
-     }
-     winBtnGreenNorm.release = () => {
-         console.log("Send message");
-     }
-     
-     //winBtnGreenNorm.scale.y = 1.5;
+     winBtnGreenNorm.interactive = true;
+     winBtnGreenNorm.buttonMode = true;
+     winBtnGreenNorm.on('pointerdown', onClick);
+          //winBtnGreenNorm.scale.y = 1.5;
      app.stage.addChild(winBtnGreenNorm);
      let btnCloseNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_close_norm.png"]);
      btnCloseNorm.x = bgBigPurple.x + bgBigPurple.width - 55;
@@ -210,3 +203,7 @@
          }
      })
  };
+
+ function onClick() {
+     console.log("Send message");
+ }
