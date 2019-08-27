@@ -140,12 +140,13 @@
      sendAll.x = winBtnGreenNorm.x + (winBtnGreenNorm.width - sendAll.width) / 2;
      sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
      app.stage.addChild(sendAll);
+
      listFriends();
 
      let t = new Tink(PIXI, app.renderer.view);
      let pointer = t.makePointer();
      pointer.tap = () => console.log("Press");
-     if (pointer.hitTestSprite(sendAll)) {
+     if (pointer.hitTestSprite(winBtnGreenNorm)) {
          pointer.cursor = "cursor";
          pointer.tap = () => console.log("Send all");
      }
