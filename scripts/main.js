@@ -187,9 +187,10 @@
          let y1 = 0;
          for (let i = 0; i <= 8; i++) {
              let row1 = createFriendBox(data.response.items[i].first_name, data.response.items[i].photo_50);
+             row1.id = id;
              row1.interactive = true;
              row1.buttonMode = true;
-             row1.on('click', sendMessage);
+             row1.on('click', sendMessage(data.response.items[i].first_name));
              if (i < 4) {
                  row1.x = a;
                  row1.y = y + b;
@@ -209,6 +210,6 @@
      console.log("Send message");
  };
 
- function sendMessage() {
-     console.log("Hello my friend!!");
+ function sendMessage(name) {
+     console.log(`Hello my friend ${name}!!`);
  }
