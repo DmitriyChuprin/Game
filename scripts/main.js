@@ -47,13 +47,13 @@
      bgBigPurpleTitle.y = bgBigPurple.y + 10;
      app.stage.addChild(bgBigPurpleTitle);
      let winBtnGreenNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_green_norm.png"]);
+     let winBtnGreenOver = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_green_over.png"]);
      winBtnGreenNorm.x = bgBigPurple.x + (bgBigPurple.width - winBtnGreenNorm.width) / 2 - 40;
      winBtnGreenNorm.y = (bgBigPurple.y + bgBigPurple.height) - winBtnGreenNorm.height - 15;
      winBtnGreenNorm.scale.x = 1.5;
      winBtnGreenNorm.interactive = true;
      winBtnGreenNorm.buttonMode = true;
      winBtnGreenNorm.on('click', onClick);
-     winBtnGreenNorm.on('tap', onTap);
      //winBtnGreenNorm.scale.y = 1.5;
      app.stage.addChild(winBtnGreenNorm);
      let btnCloseNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_close_norm.png"]);
@@ -206,11 +206,5 @@
  };
 
  function onClick() {
-     winBtnGreenNorm = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_green_over.png"]);
-     app.stage.addChild(winBtnGreenNorm);
      console.log("Send message");
  };
-
- function onTap() {
-
- }
