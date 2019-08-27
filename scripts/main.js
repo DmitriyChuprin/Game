@@ -142,7 +142,7 @@
      app.stage.addChild(sendAll);
      listFriends();
 
-     let t = new Tink(PIXI, renderer.view);
+     let t = new Tink(PIXI, app.renderer.view);
      let pointer = t.makePointer();
      pointer.tap = () => console.log("Press");
      pointer.hitTestSprite(sendAll);
