@@ -187,10 +187,10 @@
 
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
+         delete newbe;
          length = data.response.items.length;
-         if (row1) {
-             delete row1;
-         }
+         let newbe = new Container();
+         app.stage.addChild(newbe);
          let a = 244;
          let b = 288.5;
          let y = 0;
@@ -213,7 +213,7 @@
                  row1.y = y1 + b;
                  y1 += row1.height + 10;
              }
-             app.stage.addChild(row1);
+             newbe.addChild(row1);
          }
      })
  };
