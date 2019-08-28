@@ -192,7 +192,7 @@
          let b = 288.5;
          let y = 0;
          let y1 = 0;
-         for (let i = 0; i <= 8; i++) {
+         for (let i = 0; i <= length; i++) {
              let row1 = createFriendBox(data.response.items[i].first_name, data.response.items[i].photo_50);
 
              row1.interactive = true;
