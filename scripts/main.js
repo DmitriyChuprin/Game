@@ -4,7 +4,7 @@
      loader = PIXI.Loader.shared,
      Sprite = PIXI.Sprite,
      Text = PIXI.Text;
-
+ let offset = 0;
 
  let app = new PIXI.Application({ width: 898, height: 649 });
  let appWidth = app.renderer.width;
@@ -221,16 +221,19 @@
  function sendMessage() {
      console.log("Hello my friend");
  };
+
  function next() {
-    let offset = 8;
-    listFriends(offset);
-    offset += 8;
+     let newOffset = offset + 8;
+     listFriends(newOffset);
+     offset += 8;
  };
+
  function previous() {
-    let offset = 8;
-    listFriends(offset);
-    offset -= 8;
-    if (offset < 0) {
-        offset = 0;
-    };
+     let newOffset = offset - 8;
+     if (newOffset < 0) {
+         newOffset = 0;
+     };
+     listFriends(newOffset);
+     offset -= 8;
+
  };
