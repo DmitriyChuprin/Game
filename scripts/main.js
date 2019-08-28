@@ -11,6 +11,7 @@
  let appWidth = app.renderer.width;
  let appHeight = app.renderer.height;
  document.body.appendChild(app.view);
+ load();
 
  function load() {
      loader
