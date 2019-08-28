@@ -4,7 +4,8 @@
      loader = PIXI.Loader.shared,
      Sprite = PIXI.Sprite,
      Text = PIXI.Text;
- let offset = 0;
+ let schet = 0;
+ let length = 0;
 
  let app = new PIXI.Application({ width: 898, height: 649 });
  let appWidth = app.renderer.width;
@@ -186,7 +187,7 @@
 
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
-         console.log(data);
+         length = data.response.items.length;
          let a = 244;
          let b = 288.5;
          let y = 0;
@@ -223,17 +224,19 @@
  };
 
  function next() {
-     let newOffset = offset + 8;
+     let newOffset = schet + 8;
      listFriends(newOffset);
-     offset += 8;
+     schet += length;
  };
 
  function previous() {
-     let newOffset = offset - 8;
+     let newOffset = schet - 8;
+
      if (newOffset < 0) {
          newOffset = 0;
+         schet = 0;
      };
      listFriends(newOffset);
-     offset -= 8;
+     schet -= length;
 
  };
