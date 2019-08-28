@@ -188,6 +188,9 @@
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
          length = data.response.items.length;
+         if (row1) {
+             delete row1;
+         }
          let a = 244;
          let b = 288.5;
          let y = 0;
