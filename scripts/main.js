@@ -183,7 +183,7 @@
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
 
-         load();
+
          length = data.response.items.length;
          let a = 244;
          let b = 288.5;
