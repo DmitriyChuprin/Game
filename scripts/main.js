@@ -67,7 +67,7 @@
      btnArrowOver1.y = bgBigPurple.height / 2 + 120;
      btnArrowOver1.interactive = true;
      btnArrowOver1.buttonMode = true;
-     btnArrowOver1.on('click', next);
+     btnArrowOver1.on('click', previous);
      app.stage.addChild(btnArrowOver1);
      let btnArrowOver2 = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_btn_arrow_over.png"]);
      btnArrowOver2.rotation = 1.5;
@@ -75,7 +75,7 @@
      btnArrowOver2.y = bgBigPurple.height / 2 + 120;
      btnArrowOver2.interactive = true;
      btnArrowOver2.buttonMode = true;
-     btnArrowOver2.on('click', previous);
+     btnArrowOver2.on('click', next);
      app.stage.addChild(btnArrowOver2);
      let giftMouseB = new Sprite(loader.resources["images/image_atlas.json"].textures["WIN_gift_mouseB.png"]);
      giftMouseB.x = bgBigPurple.x - giftMouseB.width / 4 + 5;
