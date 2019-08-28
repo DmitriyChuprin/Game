@@ -11,7 +11,7 @@
  let appWidth = app.renderer.width;
  let appHeight = app.renderer.height;
  document.body.appendChild(app.view);
- load();
+ listFriends();
 
  function load() {
      loader
@@ -145,9 +145,7 @@
          sendAll.x = winBtnGreenNorm.x + (winBtnGreenNorm.width - sendAll.width) / 2;
          sendAll.y = winBtnGreenNorm.y + (winBtnGreenNorm.height - sendAll.height) / 2 - 3;
          app.stage.addChild(sendAll);
-         if (length === 0) {
-             listFriends();
-         }
+
 
      }
  }
@@ -183,7 +181,7 @@
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
 
-
+         load();
          length = data.response.items.length;
          let a = 244;
          let b = 288.5;
