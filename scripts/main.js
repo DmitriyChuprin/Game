@@ -72,7 +72,7 @@
      btnArrowOver2.rotation = 1.5;
      btnArrowOver2.x = bgBigPurple.x + bgBigPurple.width - 50;
      btnArrowOver2.y = bgBigPurple.height / 2 + 120;
-     bbtnArrowOver2.interactive = true;
+     btnArrowOver2.interactive = true;
      btnArrowOver2.buttonMode = true;
      btnArrowOver2.on('click', previous);
      app.stage.addChild(btnArrowOver2);
