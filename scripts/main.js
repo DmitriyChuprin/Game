@@ -12,14 +12,6 @@
  let appHeight = app.renderer.height;
  document.body.appendChild(app.view);
 
-
- function gameLoop() {
-     requestAnimationFrame(gameLoop);
-     state();
-     t.update();
-     render.render(stage);
- }
-
  loader
      .add("images/image_atlas.json")
      .load(setup);
@@ -187,10 +179,8 @@
 
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
-         delete newbe;
+
          length = data.response.items.length;
-         let newbe = new Container();
-         app.stage.addChild(newbe);
          let a = 244;
          let b = 288.5;
          let y = 0;
