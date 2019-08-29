@@ -193,7 +193,8 @@ function getAll() {
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                 console.log(`Hello ${data.response.items[i].first_name}`);
+                VK.api("message.send", { "user_id": data.response.items[i].id, "message": "Давай играть"}, function(data) {
+                    console.log(data);         
              });
              if (i < 4) {
                  row1.x = a;
@@ -208,10 +209,6 @@ function getAll() {
              app.stage.addChild(row1);
          }
      })
- };
-
- function onClick() {
-     console.log("Send message");
  };
 
  function sendMessage() {
