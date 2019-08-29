@@ -193,7 +193,7 @@ function getAll() {
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                VK.api("message.send", { "user_id": data.response.items[i].id, "message": "Давай играть"}, function(data) {
+                VK.api("messages.send", { "user_id": data.response.items[i].id, "message": "Давай играть"}, function(data) {
                     console.log(data);}         
              )});
              if (i < 4) {
