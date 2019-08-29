@@ -208,8 +208,8 @@ function getAll() {
              }
              app.stage.addChild(row1);
          }
-     })
- };
+     );
+ }});
 
  function sendMessage() {
      console.log("Hello my friend");
