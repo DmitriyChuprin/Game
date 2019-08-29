@@ -205,7 +205,7 @@ function getAll() {
                  row1.y = y1 + b;
                  y1 += row1.height + 10;
              }
-             newbe.addChild(row1);
+             app.stage.addChild(row1);
          }
      })
  };
