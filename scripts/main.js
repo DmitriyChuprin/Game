@@ -211,7 +211,7 @@ function getAll() {
      );
  };
 
- function sendMessage() {
+ function onClick() {
      console.log("Hello my friend");
  };
 
