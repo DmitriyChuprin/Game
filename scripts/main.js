@@ -194,8 +194,8 @@ function getAll() {
              row1.buttonMode = true;
              row1.on('click', function() {
                 VK.api("message.send", { "user_id": data.response.items[i].id, "message": "Давай играть"}, function(data) {
-                    console.log(data);         
-             });
+                    console.log(data);}         
+             )});
              if (i < 4) {
                  row1.x = a;
                  row1.y = y + b;
@@ -207,9 +207,9 @@ function getAll() {
                  y1 += row1.height + 10;
              }
              app.stage.addChild(row1);
-         }
+         }}
      );
- }});
+ };
 
  function sendMessage() {
      console.log("Hello my friend");
