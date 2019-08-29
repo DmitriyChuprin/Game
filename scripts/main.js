@@ -173,8 +173,8 @@
      friendPicture.width = 40;
      friendPicture.height = 40;
      ask.addChild(shape);
-     ask.addChild(friendPicture);
      ask.addChild(frame1);
+     ask.addChild(friendPicture);
      ask.addChild(frame);
      ask.addChild(check);
      ask.addChild(name);
