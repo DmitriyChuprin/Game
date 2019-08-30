@@ -159,6 +159,10 @@
      let check = new Sprite(loader.resources["images/image_atlas.json"].textures["checkbox_norm.png"]);
      check.x = shape.width - 45;
      check.y = (shape.height - check.height) / 2 - 2;
+     let checkGreen = new Sprite(loader.resources["images/image_atlas.json"].textures["check.png"]);
+     checkGreen.x = (check.width - checkGreen.width) / 2;
+     checkGreen.y = (check.height - checkGreen.height) / 2;
+     checkGreen.visible = false;
      let name = new Text(firstName, {
          fontFamily: "Arial",
          fontSize: "17px",
@@ -178,6 +182,7 @@
      ask.addChild(friendPicture);
      ask.addChild(frame);
      ask.addChild(check);
+     ask.addChild(checkGreen);
      ask.addChild(name);
      return ask;
  }
@@ -199,7 +204,8 @@
              row1.on('click', function() {
                  VK.api("messages.send", { "user_id": data.response.items[i].id, "message": "Давай играть" }, function(data) {
                      console.log(data);
-                 })
+                 });
+                 checkGreen.visible = true;
              });
              if (i < 4) {
                  row1.x = a;
