@@ -172,6 +172,7 @@
      let friendPicture = new PIXI.Sprite(pictureTexture);
      friendPicture.width = 40;
      friendPicture.height = 40;
+     friendPicture.visible = false;
      ask.addChild(shape);
      ask.addChild(frame1);
      ask.addChild(friendPicture);
