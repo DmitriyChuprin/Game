@@ -159,7 +159,7 @@
      let check = new Sprite(loader.resources["images/image_atlas.json"].textures["checkbox_norm.png"]);
      check.x = shape.width - 45;
      check.y = (shape.height - check.height) / 2 - 2;
-     
+
      let name = new Text(firstName, {
          fontFamily: "Arial",
          fontSize: "17px",
@@ -197,10 +197,8 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                 VK.api("messages.send", { "user_id": data.response.items[i].id, "message": "Давай играть" }, function(data) {
-                     console.log(data);
-                 });
-                 
+                 VK.callMethod("showInviteBox");
+
              });
              if (i < 4) {
                  row1.x = a;
