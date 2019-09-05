@@ -197,15 +197,14 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-<<<<<<< HEAD
-                 VK.api("apps.sendRequest", { "user_id": data.response.items[i].id, "text": "Давай играть", "name": "name", "key": data.response.items[i].id }, function(data) {
+                VK.api("apps.sendRequest", { "user_id": data.response.items[i].id, "text": "Давай играть", "name": "name", "key": data.response.items[i].id }, function(data) {
                      console.log(data);
                  });
                  
-=======
+
                  VK.callMethod("showInviteBox");
 
->>>>>>> 253933cd63d373d411312150ce559d3b2eed1948
+
              });
              if (i < 4) {
                  row1.x = a;
