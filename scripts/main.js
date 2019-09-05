@@ -202,7 +202,7 @@
                  });
                  
 
-                 VK.callMethod("showInviteBox");
+               
 
 
              });
