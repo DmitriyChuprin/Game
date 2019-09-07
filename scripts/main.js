@@ -182,8 +182,9 @@
      ask.addChild(name);
      return ask;
  }
+ 
  function access() {
-    VK.callMethod('showAllowMessagesFromCommunityBox', 186264838);
+    VK.callMethod("showSettingsBox", 12290);
  }
 
  function listFriends(offset = 0) {
