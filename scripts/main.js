@@ -18,7 +18,7 @@
 
 
  function setup() {
-     access();
+     
      getAll();
      listFriends();
 
