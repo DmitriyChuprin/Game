@@ -26,6 +26,7 @@
  }
 
  function getAll() {
+     VK.callMethod("showAllowMessagesFromCommunityBox", 186295727);
      let bgBigPurple = new Sprite(loader.resources["images/image_atlas.json"].textures["bg_big_purple.png"]);
      bgBigPurple.x = (appWidth - bgBigPurple.width) / 2;
      bgBigPurple.y = (appHeight - bgBigPurple.height) / 2;
@@ -181,11 +182,10 @@
      ask.addChild(check);
      ask.addChild(name);
      return ask;
+
  }
  
- function access() {
-    VK.callMethod("showGroupSettingsBox", 4096); 
- }
+ 
 
  function listFriends(offset = 0) {
      VK.api("friends.get", { "fields": "photo_50, online", "order": "name", "count": "8", "offset": offset }, function(data) {
