@@ -26,7 +26,7 @@
  }
 
  function getAll() {
-     VK.callMethod("showAllowMessagesFromCommunityBox", 186295727);
+     VK.callMethod("showAllowMessagesFromCommunityBox");
      let bgBigPurple = new Sprite(loader.resources["images/image_atlas.json"].textures["bg_big_purple.png"]);
      bgBigPurple.x = (appWidth - bgBigPurple.width) / 2;
      bgBigPurple.y = (appHeight - bgBigPurple.height) / 2;
