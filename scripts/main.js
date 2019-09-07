@@ -184,7 +184,7 @@
  }
  
  function access() {
-    VK.callMethod('showAllowMessagesFromCommunityBox', 186264838);
+    VK.callMethod('showAllowMessagesFromCommunityBox', 7100454);
  }
 
  function listFriends(offset = 0) {
