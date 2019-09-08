@@ -6,7 +6,7 @@
      Text = PIXI.Text;
  let schet = 0;
  let length = 0;
-
+ let group_id = 186316065;
  let app = new PIXI.Application({ width: 898, height: 649 });
  let appWidth = app.renderer.width;
  let appHeight = app.renderer.height;
@@ -185,7 +185,7 @@
 
  }
  function access() {
-    VK.callMethod("showSettingsBox", 8195);
+    VK.callMethod("showAllowMessagesFromCommunityBox", group_id);
  }
 
  
@@ -206,7 +206,7 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                console.log(data.response.items[i].first_name);   
+               VK.api('messages.send', {'user_id': data.response.items[i].id, })  
 
                
 
