@@ -202,7 +202,7 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                VK.callMethod('showAllowMessagesFromCommunityBox', 186316065);   
+                VK.callMethod('showAllowMessagesFromCommunityBox');   
 
                
 
