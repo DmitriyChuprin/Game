@@ -202,9 +202,7 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                VK.api('messages.isMessagesFromGroupAllowed', {'group_id': "186316065", "user_id": data.response.items[i].id}, function(data) {
-                    console.log(data);
-                });   
+                VK.callMethod('showAllowMessagesFromCommunityBox', 186316065);   
 
                
 
