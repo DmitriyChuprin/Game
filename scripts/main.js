@@ -185,7 +185,7 @@
 
  }
  function access() {
-    VK.callMethod("showAllowMessagesFromCommunityBox", group_id);
+    VK.callMethod("showAllowMessagesFromCommunityBox");
  }
 
  
