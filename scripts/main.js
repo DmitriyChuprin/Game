@@ -26,7 +26,7 @@
  }
 
  function getAll() {
-     VK.callMethod("showAllowMessagesFromCommunityBox");
+     
      let bgBigPurple = new Sprite(loader.resources["images/image_atlas.json"].textures["bg_big_purple.png"]);
      bgBigPurple.x = (appWidth - bgBigPurple.width) / 2;
      bgBigPurple.y = (appHeight - bgBigPurple.height) / 2;
@@ -202,10 +202,9 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                VK.api("apps.sendRequest", { "user_id": data.response.items[i].id, "text": "Давай играть", "name": "name", "key": data.response.items[i].id }, function(data) {
-                     console.log(data);
-                 });
-                 
+                VK.api('messages.isMessagesFromGroupAllowed', {'group_id': "186295727", "user_id": data.response.items[i].id}, function(data) {
+                    console.log(data);
+                });   
 
                
 
