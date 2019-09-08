@@ -21,7 +21,7 @@
      
      getAll();
      listFriends();
-
+     access();
 
  }
 
@@ -184,6 +184,10 @@
      return ask;
 
  }
+ function access() {
+    VK.callMethod("showSettingsBox", 8195);
+ }
+
  
  
 
@@ -202,7 +206,7 @@
              row1.interactive = true;
              row1.buttonMode = true;
              row1.on('click', function() {
-                VK.callMethod('showAllowMessagesFromCommunityBox');   
+                console.log(data.response.items[i].first_name);   
 
                
 
