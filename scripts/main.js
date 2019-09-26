@@ -185,7 +185,8 @@
 
  }
  function access() {
-    VK.callMethod("showGroupSettingsBox", 4096);
+     let answer = VK.callMethod("showGroupSettingsBox", 4096);
+     return console.log(answer);
 
  }
 
